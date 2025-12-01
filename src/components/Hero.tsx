@@ -3,20 +3,37 @@ import { ReactNode } from 'react';
 interface HeroProps {
   title: string;
   subtitle?: string;
-  backgroundImage: string;
+  backgroundImage?: string;
+  backgroundVideo?: string;
   height?: string;
   children?: ReactNode;
 }
 
-const Hero = ({ title, subtitle, backgroundImage, height = 'h-[70vh]', children }: HeroProps) => {
+const Hero = ({ title, subtitle, backgroundImage, backgroundVideo, height = 'h-[70vh]', children }: HeroProps) => {
   return (
     <div className={`relative ${height} flex items-center justify-center overflow-hidden`}>
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${backgroundImage})` }}
-      >
-        <div className="absolute inset-0 bg-gradient-to-b from-reroyal-darkest/80 via-reroyal-darkest/70 to-reroyal-darkest/90"></div>
-      </div>
+      {backgroundVideo ? (
+        <>
+          <video
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+          >
+            <source src={backgroundVideo} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          <div className="absolute inset-0 bg-gradient-to-b from-reroyal-darkest/80 via-reroyal-darkest/70 to-reroyal-darkest/90"></div>
+        </>
+      ) : (
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: backgroundImage ? `url(${backgroundImage})` : undefined }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-b from-reroyal-darkest/80 via-reroyal-darkest/70 to-reroyal-darkest/90"></div>
+        </div>
+      )}
 
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <h1

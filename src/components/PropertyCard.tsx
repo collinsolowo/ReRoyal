@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { FaBed, FaBath, FaRulerCombined, FaMapMarkerAlt } from 'react-icons/fa';
 import { Property } from '../data/properties';
 
@@ -7,14 +8,28 @@ interface PropertyCardProps {
 }
 
 const PropertyCard = ({ property, onClick }: PropertyCardProps) => {
-  const formatPrice = (price: number) => {
+  const navigate = useNavigate();
+
+  const formatPrice = (price: string | number) => {
+    if (typeof price === 'string') {
+      return price;
+    }
     return `₦${(price / 1000000).toFixed(0)}M`;
+  };
+
+  const handleCardClick = () => {
+    if (onClick) {
+      onClick();
+    } else {
+      const slug = property.title.toLowerCase().replace(/\s+/g, '-');
+      navigate(`/properties/${slug}`);
+    }
   };
 
   return (
     <div
       className="bg-reroyal-dark rounded-lg overflow-hidden hover:shadow-2xl hover:shadow-reroyal-violet/30 transition-all duration-300 cursor-pointer group"
-      onClick={onClick}
+      onClick={handleCardClick}
       data-aos="fade-up"
       data-aos-duration="800"
     >
@@ -80,7 +95,14 @@ const PropertyCard = ({ property, onClick }: PropertyCardProps) => {
             <p className="text-xs text-gray-500 mb-1">Price</p>
             <p className="text-2xl font-bold text-accent-gold">{formatPrice(property.price)}</p>
           </div>
-          <button className="px-6 py-2 bg-gradient-to-r from-reroyal-violet to-reroyal-purple rounded-md text-accent-silver text-sm font-medium hover:shadow-lg hover:shadow-reroyal-violet/50 transition-all duration-300">
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              const slug = property.title.toLowerCase().replace(/\s+/g, '-');
+              navigate(`/properties/${slug}`);
+            }}
+            className="px-6 py-2 bg-gradient-to-r from-reroyal-violet to-reroyal-purple rounded-md text-accent-silver text-sm font-medium hover:shadow-lg hover:shadow-reroyal-violet/50 transition-all duration-300"
+          >
             View Details
           </button>
         </div>

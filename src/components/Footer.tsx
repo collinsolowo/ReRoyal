@@ -13,7 +13,7 @@ const Footer = () => {
               <span className="text-reroyal-violet">RE</span>ROYAL
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Bridging Luxury with Vision. Your premier partner in high-end real estate investments across Lagos.
+              Connecting premium developers with high-net-worth investors. Excellence through professionalism and integrity.
             </p>
             <div className="flex space-x-4">
               <a
@@ -74,22 +74,17 @@ const Footer = () => {
                   Investment Solutions
                 </Link>
               </li>
-              <li>
-                <Link to="/insights" className="text-gray-400 hover:text-reroyal-violet transition-colors duration-300">
-                  Market Insights
-                </Link>
-              </li>
             </ul>
           </div>
 
           <div>
             <h3 className="text-xl font-semibold mb-6 text-accent-gold">Services</h3>
             <ul className="space-y-3">
-              <li className="text-gray-400">Luxury Residential Sales</li>
-              <li className="text-gray-400">Commercial Real Estate</li>
-              <li className="text-gray-400">Investment Advisory</li>
-              <li className="text-gray-400">Property Development</li>
-              <li className="text-gray-400">Asset Management</li>
+              <li className="text-gray-400">Client Service</li>
+              <li className="text-gray-400">Property Management</li>
+              <li className="text-gray-400">Property Listing</li>
+              <li className="text-gray-400">Project Management</li>
+              <li className="text-gray-400">Warehouse Sales & Lease</li>
             </ul>
           </div>
 

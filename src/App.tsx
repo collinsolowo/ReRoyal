@@ -9,9 +9,10 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Services from './pages/Services';
 import Properties from './pages/Properties';
+import PropertyDetail from './pages/PropertyDetail';
 import Investment from './pages/Investment';
-import Insights from './pages/Insights';
 import Contact from './pages/Contact';
+import './App.css'
 
 function App() {
   useEffect(() => {
@@ -24,15 +25,15 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen bg-reroyal-darkest">
+      <div className="min-h-screen bg-reroyal-darkest body">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/services" element={<Services />} />
           <Route path="/properties" element={<Properties />} />
+          <Route path="/properties/:slug" element={<PropertyDetail />} />
           <Route path="/investment" element={<Investment />} />
-          <Route path="/insights" element={<Insights />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
         <Footer />

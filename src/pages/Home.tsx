@@ -3,34 +3,33 @@ import { FaBuilding, FaChartLine, FaUsers, FaTrophy } from 'react-icons/fa';
 import Hero from '../components/Hero';
 import PropertyCard from '../components/PropertyCard';
 import { properties } from '../data/properties';
-
+import HeroVid from '../assets/heroVID.mp4'
 const Home = () => {
   const featuredProperties = properties.slice(0, 3);
 
   const stats = [
-    { icon: FaBuilding, value: '200+', label: 'Luxury Properties' },
-    { icon: FaChartLine, value: '₦50B+', label: 'Transactions' },
-    { icon: FaUsers, value: '99%', label: 'Client Satisfaction' },
-    { icon: FaTrophy, value: '15+', label: 'Years Excellence' },
+    { icon: FaBuilding, value: 'Premium', label: 'Developer Network' },
+    { icon: FaUsers, value: '1000+', label: 'Satisfied Investors' },
+    { icon: FaTrophy, value: '500+', label: 'Properties Managed' },
   ];
 
   const testimonials = [
     {
-      name: 'Dr. Adebayo Okonkwo',
-      role: 'CEO, TechVentures',
-      content: 'REROYAL transformed our search for commercial space into a seamless experience. Their market knowledge and discretion are unmatched.',
+      name: 'Mr. Emeka Okonkwo',
+      role: 'Founder, Premier Developments',
+      content: 'REROYAL\'s professionalism and integrity have been instrumental in connecting our luxury projects with qualified investors. Exceptional service provider.',
       image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=150'
     },
     {
-      name: 'Mrs. Chioma Nwankwo',
-      role: 'Investment Banker',
-      content: 'The team at REROYAL delivered beyond expectations. They understood our vision and found the perfect luxury residence for our family.',
+      name: 'Mrs. Amina Hassan',
+      role: 'Real Estate Investor',
+      content: 'Working with REROYAL transformed my investment strategy. Their expertise in high-net-worth properties is unmatched in Lagos.',
       image: 'https://images.pexels.com/photos/1181690/pexels-photo-1181690.jpeg?auto=compress&cs=tinysrgb&w=150'
     },
     {
-      name: 'Alhaji Mohammed Ibrahim',
-      role: 'Real Estate Investor',
-      content: 'Professional, thorough, and results-driven. REROYAL has been instrumental in building my property portfolio in Lagos.',
+      name: 'Chief Adekunle Adebayo',
+      role: 'Property Portfolio Manager',
+      content: 'Professional service, transparent dealings, and consistent results. REROYAL is the trusted partner for serious real estate investors.',
       image: 'https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150'
     },
   ];
@@ -38,9 +37,9 @@ const Home = () => {
   return (
     <div className="bg-reroyal-darkest">
       <Hero
-        title="Bridging Luxury with Vision"
-        subtitle="Premium real estate solutions for discerning investors across Lagos' most exclusive locations"
-        backgroundImage="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920"
+        title="Premium Real Estate for High-Net-Worth Investors"
+        subtitle="Connecting elite developers with affluent clients. Luxury residential and commercial properties across Lagos' most prestigious locations."
+        backgroundVideo={HeroVid}
         height="h-screen"
       >
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -61,7 +60,7 @@ const Home = () => {
 
       <section className="py-20 bg-gradient-to-b from-reroyal-darkest to-reroyal-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 justify-items-center">
             {stats.map((stat, index) => (
               <div
                 key={index}
@@ -81,6 +80,7 @@ const Home = () => {
         </div>
       </section>
 
+
       <section className="py-20 bg-reroyal-darker">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -89,7 +89,7 @@ const Home = () => {
               data-aos="fade-up"
               data-aos-duration="1000"
             >
-              Featured Properties
+              Exclusive Properties
             </h2>
             <p
               className="text-gray-400 text-lg max-w-2xl mx-auto"
@@ -97,7 +97,7 @@ const Home = () => {
               data-aos-delay="200"
               data-aos-duration="1000"
             >
-              Discover our handpicked selection of luxury properties in Lagos' most prestigious locations
+              Ultra-luxury developments and premium investments curated for discerning high-net-worth investors
             </p>
           </div>
 

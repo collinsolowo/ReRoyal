@@ -5,23 +5,23 @@ const About = () => {
   const values = [
     {
       icon: FaHandshake,
-      title: 'Trust & Integrity',
-      description: 'Building lasting relationships through transparency and ethical practices in every transaction.'
+      title: 'Professionalism',
+      description: 'Delivering exemplary service standards and ethical practices in every transaction with developers and investors.'
     },
     {
       icon: FaLightbulb,
-      title: 'Innovation',
-      description: 'Leveraging cutting-edge technology and market insights to deliver exceptional results.'
+      title: 'Integrity',
+      description: 'Building trust through transparency, honesty, and accountability in all business relationships.'
     },
     {
       icon: FaShieldAlt,
-      title: 'Discretion',
-      description: 'Protecting our clients\' privacy while providing personalized, white-glove service.'
+      title: 'Quality Service',
+      description: 'Providing comprehensive real estate solutions including management, listing, and project oversight.'
     },
     {
       icon: FaAward,
-      title: 'Excellence',
-      description: 'Maintaining the highest standards in every aspect of our real estate services.'
+      title: 'Client-Centric',
+      description: 'Prioritizing the unique needs of high-net-worth clients and premium developers in every engagement.'
     }
   ];
 
@@ -30,40 +30,40 @@ const About = () => {
       name: 'Oluwaseun Adeyemi',
       role: 'Founder & CEO',
       image: 'https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: '15+ years in luxury real estate'
+      bio: '15+ years in premium real estate and developer relations'
     },
     {
       name: 'Fatima Hassan',
-      role: 'Head of Investment Advisory',
+      role: 'Head of Investor Relations',
       image: 'https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Expert in commercial properties'
+      bio: 'Expert in high-net-worth investment strategies'
     },
     {
       name: 'Chukwudi Okafor',
-      role: 'Director of Sales',
+      role: 'Director of Projects',
       image: 'https://images.pexels.com/photos/1516680/pexels-photo-1516680.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Luxury residential specialist'
+      bio: 'Specializes in luxury residential and commercial projects'
     },
     {
       name: 'Amina Bello',
-      role: 'Legal & Compliance Officer',
+      role: 'Head of Operations',
       image: 'https://images.pexels.com/photos/1181424/pexels-photo-1181424.jpeg?auto=compress&cs=tinysrgb&w=400',
-      bio: 'Property law expert'
+      bio: 'Ensures seamless property management and compliance'
     }
   ];
 
   const achievements = [
-    'Best Luxury Real Estate Firm 2023',
-    'Excellence in Client Service Award',
-    'Top Commercial Real Estate Agency',
-    'Most Trusted Realtor in Lagos'
+    'Premier Developer Network Partner 2024',
+    'Excellence in Investor Relations Award',
+    'Leading Property Management Services',
+    'Trusted High-Net-Worth Real Estate Advisor'
   ];
 
   return (
     <div className="bg-reroyal-darkest">
       <Hero
-        title="About REROYAL"
-        subtitle="Redefining luxury real estate through sophistication, trust, and innovation"
+        title="About REROYAL Realtors Limited"
+        subtitle="Connecting premium developers with high-net-worth investors in Lagos' most exclusive markets"
         backgroundImage="https://images.pexels.com/photos/380768/pexels-photo-380768.jpeg?auto=compress&cs=tinysrgb&w=1920"
       />
 
@@ -71,15 +71,24 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div data-aos="fade-right" data-aos-duration="1000">
-              <h2 className="text-4xl font-bold text-accent-silver mb-6">Our Story</h2>
+              <h2 className="text-4xl font-bold text-accent-silver mb-6">Our Mission & Vision</h2>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-reroyal-violet mb-3">Mission</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  To provide exceptional real estate experiences through professionalism and integrity.
+                </p>
+              </div>
+              <div className="mb-6">
+                <h3 className="text-xl font-semibold text-reroyal-violet mb-3">Vision</h3>
+                <p className="text-gray-400 leading-relaxed">
+                  To be the world's leading online real estate retailer where customers can find any property they want to buy online by just visiting one site.
+                </p>
+              </div>
               <p className="text-gray-400 mb-4 leading-relaxed">
-                Founded over 15 years ago, REROYAL Realtors Limited has established itself as Lagos' premier luxury real estate firm. We specialize in connecting high-net-worth individuals with exceptional properties that match their vision and lifestyle.
-              </p>
-              <p className="text-gray-400 mb-4 leading-relaxed">
-                Our deep understanding of the Lagos luxury market, combined with our commitment to discretion and excellence, has made us the trusted partner for Nigeria's most discerning property investors.
+                REROYAL Realtors Limited specializes in connecting premium developers with affluent investors and clients in both primary and secondary markets. Our expertise spans luxury residential estates, prime commercial developments, and strategic investment opportunities across Lagos.
               </p>
               <p className="text-gray-400 leading-relaxed">
-                From exclusive residential estates to prime commercial developments, we bridge the gap between luxury and vision, creating opportunities that transcend traditional real estate transactions.
+                With a comprehensive suite of services including property management, project management, and pre-commissioning services, we deliver complete real estate solutions for high-net-worth individuals and institutional investors.
               </p>
             </div>
             <div data-aos="fade-left" data-aos-duration="1000" className="relative">

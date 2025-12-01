@@ -22,7 +22,6 @@ const Navbar = () => {
     { name: 'Services', path: '/services' },
     { name: 'Properties', path: '/properties' },
     { name: 'Investment', path: '/investment' },
-    { name: 'Insights', path: '/insights' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -33,9 +32,9 @@ const Navbar = () => {
       <div className="bg-reroyal-darker text-accent-silver py-2 px-4 md:px-8 text-xs md:text-sm hidden lg:block">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center gap-6">
-            <a href="tel:+234-XXX-XXXX-XXX" className="flex items-center gap-2 hover:text-reroyal-violet transition">
+            <a href="tel:+234-1-XXX-XXXX" className="flex items-center gap-2 hover:text-reroyal-violet transition">
               <FaPhone className="text-xs" />
-              <span>+234-XXX-XXXX-XXX</span>
+              <span>+234 (0) 1 XXX XXXX</span>
             </a>
             <a href="mailto:info@reroyalrealtors.com" className="flex items-center gap-2 hover:text-reroyal-violet transition">
               <FaEnvelope className="text-xs" />
@@ -43,7 +42,7 @@ const Navbar = () => {
             </a>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-accent-gold">Bridging Luxury with Vision</span>
+            <span className="text-accent-gold">Lagos, Nigeria</span>
           </div>
         </div>
       </div>
